@@ -1,0 +1,10 @@
+[package]
+name = "clog-website"
+version = "0.1.0"
+authors = ["Philip Jackson <p-jackson@live.com>"]
+
+[dependencies]
+nickel = "0.8"
+clog = "0.9"
+rustc-serialize = "0.3"
+uuid = { version = "0.3", features = ["v4"] }

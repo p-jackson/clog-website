@@ -51,5 +51,9 @@ fn main() {
 
     server.utilize(StaticFilesHandler::new("public/build"));
 
-    server.listen("127.0.0.1:6767");
+    server.listen(("0.0.0.0", get_server_port()));
+}
+
+fn get_server_port() -> u16 {
+    std::env::var("PORT").unwrap_or("6767".to_string()).parse().unwrap()
 }
